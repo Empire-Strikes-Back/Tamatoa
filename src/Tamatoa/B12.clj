@@ -1,4 +1,4 @@
-(ns Tamatoa.seed
+(ns Tamatoa.B12
   (:require
    [clojure.core.async
     :refer [chan put! take! close! offer! to-chan! timeout thread
@@ -7,7 +7,6 @@
             mult tap untap pub sub unsub mix unmix admix
             pipe pipeline pipeline-async]]
    [clojure.java.io]
-   [clojure.string]
-   [clojure.repl]))
+   [clojure.string]))
 
 (do (set! *warn-on-reflection* true) (set! *unchecked-math* true))
