@@ -2,30 +2,35 @@
 
 repl(){
   clj \
-    -J-Dclojure.core.async.pool-size=8 \
-    -X:Ripley Ripley.core/process \
+    -J-Dclojure.core.async.pool-size=1 \
+    -X:repl Ripley.core/process \
     :main-ns Tamatoa.main
 }
 
-
 main(){
   clojure \
-    -J-Dclojure.core.async.pool-size=8 \
+    -J-Dclojure.core.async.pool-size=1 \
     -M -m Tamatoa.main
 }
 
-jar(){
+uberjar(){
 
-  rm -rf out/*.jar out/classes
   clojure \
-    -X:Genie Genie.core/process \
+    -X:identicon Zazu.core/process \
+    :word '"Tamatoa"' \
+    :filename '"out/identicon/icon.png"' \
+    :size 256
+
+  rm -rf out/*.jar
+  clojure \
+    -X:uberjar Genie.core/process \
     :main-ns Tamatoa.main \
     :filename "\"out/Tamatoa-$(git rev-parse --short HEAD).jar\"" \
-    :paths '["src"]'
+    :paths '["src" "out/identicon"]'
 }
 
 release(){
-  jar
+  uberjar
 }
 
 "$@"
