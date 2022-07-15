@@ -18,7 +18,7 @@
    [Tamatoa.bananas]
    [Tamatoa.B12]
    [Tamatoa.salt]
-   [Tamatoa.oats]
+   [Tamatoa.bread]
    [Tamatoa.dried-apricots])
   (:import
    (javax.swing JFrame WindowConstants JPanel JScrollPane JTextArea BoxLayout JEditorPane ScrollPaneConstants SwingUtilities JDialog)
@@ -68,7 +68,7 @@
    '[Tamatoa.bananas]
    '[Tamatoa.B12]
    '[Tamatoa.salt]
-   '[Tamatoa.oats]
+   '[Tamatoa.bread]
    '[Tamatoa.dried-apricots]
    '[Tamatoa.main]
    :reload))
@@ -194,7 +194,7 @@
             jpanel-bananas (JPanel.)
             jpanel-B12 (JPanel.)
             jpanel-salt (JPanel.)
-            jpanel-oats (JPanel.)
+            jpanel-bread (JPanel.)
             jpanel-dried-apricots (JPanel.)]
 
         (doto jtabbed-pane
@@ -202,11 +202,11 @@
           (.addTab "bananas" jpanel-bananas)
           (.addTab "B12" jpanel-B12)
           (.addTab "salt" jpanel-salt)
-          (.addTab "oats" jpanel-oats)
+          (.addTab "bread" jpanel-bread)
           (.addTab "dried-apricots" jpanel-dried-apricots)
-          (.setSelectedComponent jpanel-oats))
+          (.setSelectedComponent jpanel-bread))
 
-        (Tamatoa.oats/process {:jpanel-tab jpanel-oats
+        (Tamatoa.bread/process {:jpanel-tab jpanel-bread
                                :db-data-dirpath db-data-dirpath})
 
         (settings-process {:jpanel-tab jpanel-B12
