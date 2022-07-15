@@ -1,4 +1,4 @@
-(ns Tamatoa.dried-apricots
+(ns Tamatoa.raisins
   (:require
    [clojure.core.async
     :refer [chan put! take! close! offer! to-chan! timeout thread
