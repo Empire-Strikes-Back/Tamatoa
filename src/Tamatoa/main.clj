@@ -20,6 +20,7 @@
    [Tamatoa.B12]
    [Tamatoa.salt]
    [Tamatoa.bread]
+   [Tamatoa.water]
    [Tamatoa.raisins])
   (:import
    (javax.swing JFrame WindowConstants JPanel JScrollPane JTextArea BoxLayout JEditorPane ScrollPaneConstants SwingUtilities JDialog)
@@ -71,6 +72,7 @@
    '[Tamatoa.B12]
    '[Tamatoa.salt]
    '[Tamatoa.bread]
+   '[Tamatoa.water]
    '[Tamatoa.raisins]
    '[Tamatoa.main]
    :reload))
@@ -198,6 +200,7 @@
             jpanel-B12 (JPanel.)
             jpanel-salt (JPanel.)
             jpanel-bread (JPanel.)
+            jpanel-water (JPanel.)
             jpanel-raisins (JPanel.)]
 
         (doto jtabbed-pane
@@ -207,6 +210,7 @@
           (.addTab "B12" jpanel-B12)
           (.addTab "salt" jpanel-salt)
           (.addTab "bread" jpanel-bread)
+          (.addTab "water" jpanel-water)
           (.addTab "raisins" jpanel-raisins)
           (.setSelectedComponent jpanel-bread))
 
