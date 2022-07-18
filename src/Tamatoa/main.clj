@@ -16,7 +16,6 @@
    [taoensso.timbre]
 
    [Tamatoa.bananas]
-   [Tamatoa.grapefruit]
    [Tamatoa.B12]
    [Tamatoa.salt]
    [Tamatoa.bread]
@@ -67,7 +66,6 @@
   []
   (require
    '[Tamatoa.bananas]
-   '[Tamatoa.grapefruit]
    '[Tamatoa.B12]
    '[Tamatoa.salt]
    '[Tamatoa.bread]
@@ -194,7 +192,6 @@
 
       (let [jtabbed-pane (JTabbedPane.)
             jpanel-bananas (JPanel.)
-            jpanel-grapefruit (JPanel.)
             jpanel-B12 (JPanel.)
             jpanel-salt (JPanel.)
             jpanel-bread (JPanel.)
@@ -203,7 +200,6 @@
         (doto jtabbed-pane
           (.setTabLayoutPolicy JTabbedPane/SCROLL_TAB_LAYOUT)
           (.addTab "bananas" jpanel-bananas)
-          (.addTab "grapefruit" jpanel-grapefruit)
           (.addTab "B12" jpanel-B12)
           (.addTab "salt" jpanel-salt)
           (.addTab "bread" jpanel-bread)
