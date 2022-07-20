@@ -15,7 +15,6 @@
    [datahike.api]
    [taoensso.timbre]
 
-   [Tamatoa.water]
    [Tamatoa.bananas]
    [Tamatoa.B12]
    [Tamatoa.salt]
@@ -66,7 +65,6 @@
 (defn reload
   []
   (require
-   '[Tamatoa.water]
    '[Tamatoa.bananas]
    '[Tamatoa.B12]
    '[Tamatoa.salt]
